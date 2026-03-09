@@ -1,48 +1,74 @@
 'use client'
 
 export function PromoBanner() {
-  return (
-    <div className="mx-4 mt-3 mb-0 flex flex-col gap-2 px-4 py-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-sm md:flex-row md:items-center">
-      <div className="flex items-center gap-2 min-w-0">
-        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
-        <p className="text-xs text-amber-200/90">
-          Built with care by <span className="font-semibold text-amber-100">nyk</span> · available for client and custom AI orchestration work.
-        </p>
-      </div>
 
-      <div className="flex flex-wrap items-center gap-2 md:ml-auto">
-        <a
-          href="https://x.com/nyk_builderz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-2xs font-medium text-amber-100 hover:text-white px-2 py-1 rounded border border-amber-300/30 hover:border-amber-200/50 transition-colors"
-        >
-          Hire nyk
-        </a>
-        <a
-          href="https://github.com/0xNyk"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-2xs font-medium text-amber-200 hover:text-amber-100 px-2 py-1 rounded border border-amber-500/20 hover:border-amber-400/40 transition-colors"
-        >
-          Follow nyk
-        </a>
-        <a
-          href="https://dictx.splitlabs.io"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-2xs font-medium text-amber-200 hover:text-amber-100 px-2 py-1 rounded border border-amber-500/20 hover:border-amber-400/40 transition-colors"
-        >
-          DictX (Upcoming)
-        </a>
-        <a
-          href="https://x.com/nyk_builderz/status/2029007663011643498?s=20"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-2xs font-medium text-amber-200 hover:text-amber-100 px-2 py-1 rounded border border-amber-500/20 hover:border-amber-400/40 transition-colors"
-        >
-          Flight Deck Pro (Upcoming)
-        </a>
+  const lotrQuotes: { quote: string; author: string; movie: string }[] = [
+    {
+      quote: "One does not simply walk into Mordor.",
+      author: "🗡️ Boromir",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "Po-ta-toes. Boil 'em, mash 'em, stick 'em in a stew.",
+      author: "🌿 Samwise Gamgee",
+      movie: "The Two Towers",
+    },
+    {
+      quote: "Fool of a Took!",
+      author: "🧙 Gandalf",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "Nobody tosses a dwarf.",
+      author: "⚒️ Gimli",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "Certainty of death. Small chance of success. What are we waiting for?",
+      author: "⚒️ Gimli",
+      movie: "The Return of the King",
+    },
+    {
+      quote: "I think I'm quite ready for another adventure.",
+      author: "🪶 Bilbo Baggins",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "Second breakfast? I don't think he knows about second breakfast.",
+      author: "🍄 Pippin",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "I don't know half of you half as well as I should like.",
+      author: "🪶 Bilbo Baggins",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "When in doubt, follow your nose.",
+      author: "🧙 Gandalf",
+      movie: "The Fellowship of the Ring",
+    },
+    {
+      quote: "YOU SHALL NOT PASS!",
+      author: "🧙 Gandalf",
+      movie: "The Fellowship of the Ring",
+    },
+  ]
+
+  const getRandomQuote = (quotes: string[]): string => {
+    return quotes[Math.floor(Math.random() * quotes.length)]
+  }
+
+  // usage
+  const quotes = getRandomQuote(lotrQuotes)
+
+  return (
+    <div className="mx-4 mt-3 mb-0 flex flex-col gap-2 px-4 py-2.5 rounded-lg bg-zinc-500/10 border border-zinc-500/20 text-sm md:flex-row md:items-center">
+      <div className="flex items-center gap-2 min-w-0">
+        <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 shrink-0" />
+        <p className="text-xs text-zinc-200/90">
+          "{quotes.quote}" — {quotes.author}, {quotes.movie}
+        </p>
       </div>
     </div>
   )
