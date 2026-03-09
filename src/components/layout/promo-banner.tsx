@@ -30,7 +30,7 @@ export function PromoBanner() {
     },
     {
       quote: "I think I'm quite ready for another adventure.",
-      author: "🧝 Bilbo Baggins",
+      author: "🗺️ Bilbo Baggins",
       movie: "The Fellowship of the Ring",
     },
     {
@@ -40,7 +40,7 @@ export function PromoBanner() {
     },
     {
       quote: "I don't know half of you half as well as I should like.",
-      author: "🧝 Bilbo Baggins",
+      author: "🗺️ Bilbo Baggins",
       movie: "The Fellowship of the Ring",
     },
     {
